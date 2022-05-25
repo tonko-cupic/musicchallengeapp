@@ -1,0 +1,46 @@
+wave {
+    border : 'solid';
+    position : relative;
+    top : -50px;
+    
+    
+  
+}
+
+.waveform {
+    overflow : hidden;
+    height : 45px;
+    position : relative;
+    top : -30px;
+    left : 45px
+
+}
+.profile .waveform {
+    height : 50px;
+}
+
+
+#wavebtn {
+    color: grey;
+    border: none;
+    width:40px;
+    height: 40px;
+    border-radius: 100%;
+    outline: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    position : relative;
+    z-index : 20;
+    top : 8px;
+  }
+  
+  button:hover {
+    background: #8e8f91;
+  }
+
+  
+  .controls {
+    text-align: left;
+    padding: 1em;
+  }
+  
