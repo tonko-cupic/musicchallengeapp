@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios'
 import { Link ,useParams } from 'react-router-dom'
 export default function Chat(props) {

@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios'
 import { Link ,useParams } from 'react-router-dom'
-import ReactAudioPlayer from 'react-audio-player';
 import Waveform from './Waveform';
 import { useNavigate } from 'react-router-dom';
 export default function Challenge() {

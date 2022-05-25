@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import { Link ,useParams } from 'react-router-dom'
-import ReactAudioPlayer from 'react-audio-player';
 import Counter from './Counter'
 import FormData from 'form-data'
 import Waveform from './Waveform';
