@@ -8,6 +8,7 @@ export default function Challenge() {
     const [inputs, setInputs] = useState({});
     const simpleValidator = useRef(new SimpleReactValidator({autoForceUpdate: this}))
     const [errMsg, setErrMsg] = useState();
+    const [disabled, setDisabled] = useState();
     const [formData, setFormData] = useState(new FormData());
     const navigate = useNavigate();
     const onSelectImageHandler = (files) => {
@@ -28,6 +29,10 @@ export default function Challenge() {
         setInputs(values => ({...values, [name]: value}))
       }
     const handleSubmit = async (event) => {
+        if (disabled) {
+            return;
+        }
+        setDisabled(true);
         event.preventDefault();
 
         const formValid = simpleValidator.current.allValid()
@@ -102,7 +107,7 @@ export default function Challenge() {
                     id="contained-button-file"
                     onChange={(e) => onSelectImageHandler(e.target.files)}
             />
-        <input style={{marginTop : '16px' }}className="ui button" type="submit" />
+        <input style={{marginTop : '16px' }}className="ui button" disabled={disabled}  type="submit" />
         </form>
         
         <div className="ui message" style={{ color: 'red', margin : '0px', display : errMsg ? 'block' : 'none'}}>

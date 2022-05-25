@@ -10,7 +10,7 @@ export default function Challenge() {
     const [challenge, setChallenge] = useState({});
     const [comment, setComment] = useState({});
     const [formData, setFormData] = useState(new FormData());
-
+    const [disabled, setDisabled] = useState();
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
@@ -105,6 +105,7 @@ export default function Challenge() {
         };
     }
     const deleteSong = async (id) => {
+        
         let token = localStorage.getItem('token')
         axios.defaults.headers.common['Authorization'] = "token: "+token
 
@@ -146,9 +147,13 @@ export default function Challenge() {
 
     }
     const submitSong = async () => {
+        if (disabled) {
+            return;
+        }
+        setDisabled(true);
         axios.defaults.headers.common['Content-Type'] ="multipart/form-data"
         let token = localStorage.getItem('token')
-            axios.defaults.headers.common['Authorization'] = "token: "+token
+        axios.defaults.headers.common['Authorization'] = "token: "+token
         let response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/upload', formData)
         let songURL = response.data.url
 
@@ -265,7 +270,7 @@ export default function Challenge() {
                     id="contained-button-file"
                     onChange={(e) => onSelectImageHandler(e.target.files)}
             />
-            <button style={{paddingLeft : '20px'}} className="ui button" onClick={() => submitSong()} >
+            <button style={{paddingLeft : '20px'}} disabled={disabled}className="ui button" onClick={() => submitSong()} >
             Send
             </button>
             </div> : <div></div>}
