@@ -105,7 +105,7 @@ export default function Challenge() {
         <h1 style={{paddingLeft : '20px'}}className="ui header">Your profile </h1>
           :
           <h1 style={{paddingLeft : '20px'}}className="ui header">
-            Profile page for user {user.username}               <i onClick={() => openInbox(user._id)}style={{ display : localStorage.getItem('isAuthenticated') == 'true' ? 'inline' : 'none', '5px', fontSize : '30px',cursor : 'pointer' }}class="envelope outline icon"></i> 
+            Profile page for user {user.username}               <i onClick={() => openInbox(user._id)}style={{ display : localStorage.getItem('isAuthenticated') == 'true' ? 'inline' : 'none',marginBottom :'5px', fontSize : '30px',cursor : 'pointer' }}class="envelope outline icon"></i> 
         </h1> }
         { edit == true ? 
                 <form onSubmit={handleSubmit}>
