@@ -13,7 +13,7 @@ const Login = () => {
     let data = { email : email, password : password }
     let response = null;
     try{
-        response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/sign-in',data)
+        response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/auth/sign-in',data)
     }catch(err){
         seterrorMsg(true)
     }

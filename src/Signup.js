@@ -14,7 +14,7 @@ const Signup = () => {
     let data = { email : email, password : password, username : username }
     let response = null;
     
-    response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/sign-up',data).then(res => {
+    response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/auth/sign-up',data).then(res => {
         
         localStorage.setItem('isAuthenticated', true);
         localStorage.setItem('token', res.data.token)
