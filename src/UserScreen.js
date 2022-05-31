@@ -137,17 +137,19 @@ class UserScreen extends React.Component {
         }).catch(err => {
             console.log(err)
         })
-
-        await axios.get(process.env.REACT_APP_BACKEND_URL + '/unread-messages', {
-            params : {
-                user : localStorage.getItem('userId')
-            }
-        }).then(res => {
-            
-            this.setState({unreadMessages : res.data.unreadMessages})
-        }).catch(err => {
-            console.log(err)
-        })
+        if (localStorage.getItem('isAuthenticated') == 'true'){
+            await axios.get(process.env.REACT_APP_BACKEND_URL + '/unread-messages', {
+                params : {
+                    user : localStorage.getItem('userId')
+                }
+            }).then(res => {
+                
+                this.setState({unreadMessages : res.data.unreadMessages})
+            }).catch(err => {
+                console.log(err)
+            })
+        }
+        
 
 
 
