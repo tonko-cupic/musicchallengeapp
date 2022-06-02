@@ -31,7 +31,9 @@ class Waveform extends Component {
     });
     this.waveform.load(track);
   };
-  
+  async componentWillUnmount(){
+    this.waveform.playPause();
+  }
   handlePlay = async () => {
     if (!this.state.hasStarted){
       this.setState({ hasStarted : true})

@@ -166,26 +166,26 @@ export default function Challenge() {
     }
     
     return (<div>
-        <div style={{ backgroundColor : 'grey', float : 'top', height : '51px'}}>
+        <div style={{ backgroundColor : '#323433', color: 'white', float : 'top', height : '51px'}}>
             
-            <h1 style={{position : 'relative', top : '8px', paddingLeft : '20px', display: 'inline-block'}}className="ui header">{challenge.name} </h1>
+            <h1 style={{backgroundColor : '#323433', color: 'white',position : 'relative', top : '8px', paddingLeft : '20px', display: 'inline-block'}}className="ui header">{challenge.name} </h1>
             
-            <div style={{paddingLeft : '20px', display: 'inline', position : 'relative', top : '6px'}}>By: 
-            {challenge.user ? <Link style={{color : 'black', fontWeight: 'bold'}} to={`/profile/${challenge.user._id}`}>
+            <div style={{backgroundColor : '#323433', color: 'white',paddingLeft : '20px', display: 'inline', position : 'relative', top : '6px'}}>By: 
+            {challenge.user ? <Link style={{backgroundColor : '#323433', color: 'white', fontWeight: 'bold'}} to={`/profile/${challenge.user._id}`}>
                     {challenge.user ? ' '+challenge.user.username : ''}
                 </Link> : <div></div>}
                 
             </div>
             
         
-            {localStorage.isAuthenticated == 'true' ? <div style={{ width : '300px', display: 'inline-block', float : 'right', marginRight : '50px'}}>
-            <Link style={{borderRadius : '0px', marginTop : '8px', color : 'black', backgroundColor : 'grey'}} className="ui button" to="/">
+            {localStorage.isAuthenticated == 'true' ? <div style={{ backgroundColor : '#323433', color: 'white',width : '300px', display: 'inline-block', float : 'right', marginRight : '50px'}}>
+            <Link style={{borderRadius : '0px', marginTop : '8px', backgroundColor : '#323433', color: 'white'}} className="ui button" to="/">
                 Back
             </Link>
             
             {
                 challenge.user ? (challenge.user._id == localStorage.getItem('userId') || localStorage.getItem('role') == 'admin')?
-                <button style={{borderRadius : '0px', marginTop : '8px', color : 'black', backgroundColor : 'grey'}}className="ui button" onClick={() => {if(window.confirm('Are you sure to delete this challenge?')){deleteChallenge(challenge.id)}}}>Delete challenge</button>
+                <button style={{borderRadius : '0px', marginTop : '8px',backgroundColor : '#323433', color: 'white'}}className="ui button" onClick={() => {if(window.confirm('Are you sure to delete this challenge?')){deleteChallenge(challenge.id)}}}>Delete challenge</button>
                 : <div></div> : <div></div>
                 
             }
@@ -193,13 +193,13 @@ export default function Challenge() {
             </div>
                  : 
             <div style={{ width : '700px', display: 'inline', float : 'right', paddingLeft: '400px', marginRight : '0px', marginTop : '10px'}}>
-                <Link style={{borderRadius : '0px', marginTop : '0px', color : 'black', backgroundColor : 'grey'}} className="ui button" to="/login">
+                <Link style={{borderRadius : '0px', marginTop : '0px', backgroundColor : '#323433', color: 'white'}} className="ui button" to="/login">
                             Login
                 </Link>
-                <Link style={{borderRadius : '0px', marginTop : '0px', color : 'black', backgroundColor : 'grey'}} className="ui button" to="/signup">
+                <Link style={{borderRadius : '0px', marginTop : '0px',backgroundColor : '#323433', color: 'white'}} className="ui button" to="/signup">
                             Sign up
                 </Link>
-                <Link style={{borderRadius : '0px', marginTop : '0px', color : 'black', backgroundColor : 'grey'}} className="ui button" to="/">
+                <Link style={{borderRadius : '0px', marginTop : '0px', backgroundColor : '#323433', color: 'white'}} className="ui button" to="/">
                 Back
             </Link>
             </div>}

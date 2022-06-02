@@ -1,3 +1,8 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
 wave {
     border : 'solid';
     position : relative;
@@ -6,7 +11,9 @@ wave {
     
   
 }
-
+body {
+  font-family: Helvetica, sans-serif;
+}
 .waveform {
     overflow : hidden;
     height : 45px;

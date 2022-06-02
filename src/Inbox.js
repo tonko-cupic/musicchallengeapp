@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios'
 import Chat from './Chat.js'
 import { Link } from 'react-router-dom'
@@ -124,11 +123,11 @@ class Inbox extends React.Component {
 
 
         return <div>
-            <div style={{ backgroundColor : 'grey', float : 'top', height : '51px', marginBottom : '0px'}}>
+            <div style={{ backgroundColor : '#323433', color: 'white', float : 'top', height : '51px', marginBottom : '0px'}}>
                
                
-                <h1 style={{position : 'relative', top : '5px', paddingLeft : '20px', width : '400px', display: 'inline-block'}}>Music challenge app</h1>
-                <Link style={{borderRadius : '0px', marginTop : '8px', color : 'black', backgroundColor : 'grey', float :'right', marginRight : '100px'}} className="ui button" to="/">
+                <h1 style={{position : 'relative', top : '5px', paddingLeft : '20px', width : '400px', display: 'inline-block'}}><Link style={{ color : 'white'}}to="/">Music challenge app</Link></h1>
+                <Link style={{borderRadius : '0px', marginTop : '8px', backgroundColor : '#323433', color: 'white', float :'right', marginRight : '100px'}} className="ui button" to="/">
                 Back
             </Link>
             

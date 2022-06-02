@@ -215,25 +215,25 @@ class UserScreen extends React.Component {
         }
 
         return (<div>
-            <div style={{ backgroundColor : 'grey', borderBottom : '1px solid grey'}}>
+            <div  style={{ backgroundColor : '#323433', color: 'white', borderBottom : '1px solid grey'}}>
             <h1 style={{position : 'relative', top : '5px', paddingLeft : '20px', width : '400px', display: 'inline-block'}}>Music challenge app</h1>
             {localStorage.isAuthenticated == 'true' ? <div  style={{ width : '400px', display: 'inline-block', float : 'right', marginRight : '50px'}}>
-            <Link style={{borderRadius : '0px', marginTop : '8px', color : 'black', backgroundColor : 'grey'}}className="ui button" to="/new_challenge">
+            <Link style={{borderRadius : '0px', marginTop : '8px', backgroundColor : '#323433', color: 'white'}}className="ui button" to="/new_challenge">
                 Create your challenge
             </Link>
-            <Link style={{borderRadius : '0px', marginTop : '8px', color : 'black', backgroundColor : 'grey'}}className="ui button" to={`/profile/${localStorage.getItem('userId')}`}>
+            <Link style={{borderRadius : '0px', marginTop : '8px',backgroundColor : '#323433', color: 'white'}}className="ui button" to={`/profile/${localStorage.getItem('userId')}`}>
                 Your profile
             </Link>
-            <Link style={{borderRadius : '0px', marginTop : '8px', color : 'black', backgroundColor : 'grey'}}className="ui button" to="/inbox">
+            <Link style={{borderRadius : '0px', marginTop : '8px', backgroundColor : '#323433', color: 'white'}}className="ui button" to="/inbox">
                 Inbox {this.state.unreadMessages ? <span style={{color : 'black'}}>{this.state.unreadMessages}</span> : <div></div>}
             </Link>
             </div>
                  : 
             <div style={{ width : '200px', display: 'inline-block', float : 'right', marginRight : '50px', marginTop :'10px'}}>
-                <Link style={{borderRadius : '0px', marginTop : '0px', color : 'black', backgroundColor : 'grey'}} className="ui button" to="/login">
+                <Link style={{borderRadius : '0px', marginTop : '0px', backgroundColor : '#323433', color: 'white'}} className="ui button" to="/login">
                             Login
                 </Link>
-                <Link style={{borderRadius : '0px', marginTop : '0px', color : 'black', backgroundColor : 'grey'}} className="ui button" to="/signup">
+                <Link style={{borderRadius : '0px', marginTop : '0px', backgroundColor : '#323433', color: 'white'}} className="ui button" to="/signup">
                             Sign up
                 </Link>
             </div>

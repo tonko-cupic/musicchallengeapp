@@ -76,9 +76,9 @@ export default function Challenge() {
 
 
     return (<div>
-        <div style={{ backgroundColor : 'grey', float : 'top', height : '51px', marginBottom : '20px'}}>
-        <h1 style={{position : 'relative', top : '8px', paddingLeft : '20px', display: 'inline-block'}}className="ui header">Add new challenge: </h1>
-        <Link style={{borderRadius : '0px', marginTop : '8px', color : 'black', backgroundColor : 'grey', float :'right', marginRight : '100px'}}className="ui button" to="/">
+        <div style={{ backgroundColor : '#323433', color: 'white', float : 'top', height : '51px', marginBottom : '20px'}}>
+        <h1 style={{backgroundColor : '#323433', color: 'white',position : 'relative', top : '8px', paddingLeft : '20px', display: 'inline-block'}}className="ui header">Add new challenge: </h1>
+        <Link style={{borderRadius : '0px', marginTop : '8px',backgroundColor : '#323433', color: 'white', float :'right', marginRight : '100px'}}className="ui button" to="/">
                 Back
             </Link>
         </div>

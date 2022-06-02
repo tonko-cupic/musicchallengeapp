@@ -93,9 +93,9 @@ export default function Challenge() {
         navigate('/inbox/')
     }
     return(<div>
-        <div style={{ backgroundColor : 'grey', float : 'top', height : '51px', marginBottom : '20px'}}>
-        <h1 style={{position : 'relative', top : '5px', paddingLeft : '20px', width : '400px', display: 'inline-block'}}>Music challenge app</h1>
-        <Link style={{borderRadius : '0px', marginTop : '8px', color : 'black', backgroundColor : 'grey', float :'right', marginRight : '100px'}} className="ui button" to="/">
+        <div style={{ backgroundColor : '#323433', color: 'white', float : 'top', height : '51px', marginBottom : '20px'}}>
+        <h1 style={{position : 'relative', top : '5px', paddingLeft : '20px', width : '400px', display: 'inline-block',backgroundColor : '#323433', color: 'white'}}><Link style={{ color : 'white'}}to="/">Music challenge app</Link></h1>
+        <Link style={{borderRadius : '0px', marginTop : '8px',backgroundColor : '#323433', color: 'white', float :'right', marginRight : '100px'}} className="ui button" to="/">
                 Back
             </Link>
             
