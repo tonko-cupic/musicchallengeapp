@@ -18,11 +18,11 @@ class Waveform extends Component {
       container: `#waveform${this.props.id}`,
       backend: 'WebAudio',
       height: 45,
-      progressColor: '#2D5BFF',
+      progressColor: '#202060',
       responsive: true,
       fillParent: true,
       minPxPerSec : 5,
-      waveColor: '#EFEFEF',
+      waveColor: '#323433',
       cursorColor: 'transparent',
     });
 

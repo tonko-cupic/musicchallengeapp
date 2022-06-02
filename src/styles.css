@@ -13,6 +13,7 @@ wave {
 }
 body {
   font-family: Helvetica, sans-serif;
+  background : Whitesmoke
 }
 .waveform {
     overflow : hidden;
